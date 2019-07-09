@@ -16,6 +16,8 @@ FOR /F "DELIMS=" %%I IN ('WHERE cmake.exe') DO FOR /F "DELIMS=" %%J IN ('DIR /B 
 
 SETLOCAL ENABLEDELAYEDEXPANSION
 
+dir
+
 FOR /F "DELIMS=" %%I IN ('DIR /O:-N /A:D-H /B') DO (
 	SET Lib=!Lib!;%CD%\%%I
 	SET Include=!Include!;%CD%\%%I
